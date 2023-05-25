@@ -6,23 +6,23 @@ export function Footer () {
     <div className='footer'>
       <div className='top'>
         <div className='item'>
-          <h1>Categories</h1>
-          <span>Women</span>
-          <span>Men</span>
-          <span>Shoes</span>
-          <span>Accessories</span>
-          <span>New Arrivals</span>
+          <h1>Categorías</h1>
+          <span>Dama</span>
+          <span>Caballero</span>
+          <span>Zapatos</span>
+          <span>Accesorios</span>
+          <span>Lo nuevo</span>
         </div>
         <div className='item'>
           <h1>Links</h1>
           <span>FAQ</span>
-          <span>Pages</span>
-          <span>Stores</span>
-          <span>Compare</span>
+          <span>Páginas</span>
+          <span>Tiendas</span>
+          <span>Comparar</span>
           <span>Cookies</span>
         </div>
         <div className='item'>
-          <h1>About</h1>
+          <h1>Nosotros</h1>
           <span>
             Lorem ipsum dolor sit amet conse ctetur adipisicing elit, sed do
             eiusmod tempor incididunt ut labore et dolore. Lorem ipsum dolor sit
@@ -31,7 +31,7 @@ export function Footer () {
           </span>
         </div>
         <div className='item'>
-          <h1>Contact</h1>
+          <h1>Contacto</h1>
           <span>
             Lorem ipsum dolor sit amet conse ctetur adipisicing elit, sed do
             eiusmod tempor incididunt ut labore et dolore. Lorem ipsum dolor sit
@@ -44,7 +44,7 @@ export function Footer () {
         <div className='left'>
           <span className='logo'>TIENDITA</span>
           <span className='copyright'>
-            © Copyright 2023. All Rights Reserved
+            © Copyright 2023. Algunos derechos reservados.
           </span>
         </div>
         <div className='right'>
