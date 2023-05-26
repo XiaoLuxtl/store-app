@@ -20,13 +20,13 @@ export function Navbar () {
             <KeyboardArrowDownIcon />
           </div>
           <div className='item'>
-            <Link className='link' to='/products/1'>Woman</Link>
+            <Link className='link' to='/products/1'>Dama</Link>
           </div>
           <div className='item'>
-            <Link className='link' to='/products/2'>Men</Link>
+            <Link className='link' to='/products/2'>Caballero</Link>
           </div>
           <div className='item'>
-            <Link className='link' to='/products/3'>Children</Link>
+            <Link className='link' to='/products/3'>Niños</Link>
           </div>
         </div>
         <div className='center'>
@@ -34,16 +34,16 @@ export function Navbar () {
         </div>
         <div className='right'>
           <div className='item'>
-            <Link className='link' to='/'>Home</Link>
+            <Link className='link' to='/'>Inicio</Link>
           </div>
           <div className='item'>
-            <Link className='link' to='/'>About</Link>
+            <Link className='link' to='/'>Nosotros</Link>
           </div>
           <div className='item'>
-            <Link className='link' to='/'>Contact</Link>
+            <Link className='link' to='/'>Contacto</Link>
           </div>
           <div className='item'>
-            <Link className='link' to='/'>Stores</Link>
+            <Link className='link' to='/'>Tiendas</Link>
           </div>
           <div className='icons'>
             <SearchIcon />
