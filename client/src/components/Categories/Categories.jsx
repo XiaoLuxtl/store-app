@@ -11,22 +11,22 @@ export function Categories () {
               src='https://images.pexels.com/photos/818992/pexels-photo-818992.jpeg?auto=compress&cs=tinysrgb&w=1600'
               alt=''
             />
-            <button>
-              <Link className='link' to='/products/1'>
+            <Link className='link' to='/products/1'>
+              <button>
                 Sale
-              </Link>
-            </button>
+              </button>
+            </Link>
           </div>
           <div className='row'>
             <img
               src='https://images.pexels.com/photos/2036646/pexels-photo-2036646.jpeg?auto=compress&cs=tinysrgb&w=1600'
               alt=''
             />
-            <button>
-              <Link to='/products/1' className='link'>
+            <Link to='/products/1' className='link'>
+              <button>
                 Women
-              </Link>
-            </button>
+              </button>
+            </Link>
           </div>
         </div>
         <div className='col'>
@@ -36,11 +36,11 @@ export function Categories () {
               src='https://images.pexels.com/photos/1813947/pexels-photo-1813947.jpeg?auto=compress&cs=tinysrgb&w=1600'
               alt=''
             />
-            <button>
-              <Link to='/products/1' className='link'>
+            <Link to='/products/1' className='link'>
+              <button>
                 New Season
-              </Link>
-            </button>
+              </button>
+            </Link>
           </div>
         </div>
         <div className='col col-l'>
@@ -51,11 +51,11 @@ export function Categories () {
                   src='https://images.pexels.com/photos/1192609/pexels-photo-1192609.jpeg?auto=compress&cs=tinysrgb&w=1600'
                   alt=''
                 />
-                <button>
-                  <Link to='/products/1' className='link'>
+                <Link to='/products/1' className='link'>
+                  <button>
                     Men
-                  </Link>
-                </button>
+                  </button>
+                </Link>
               </div>
             </div>
             <div className='col'>
@@ -65,11 +65,11 @@ export function Categories () {
                   src='https://images.pexels.com/photos/2703202/pexels-photo-2703202.jpeg?auto=compress&cs=tinysrgb&w=1600'
                   alt=''
                 />
-                <button>
-                  <Link to='/products/1' className='link'>
+                <Link to='/products/1' className='link'>
+                  <button>
                     Accessories
-                  </Link>
-                </button>
+                  </button>
+                </Link>
               </div>
             </div>
           </div>
@@ -78,11 +78,11 @@ export function Categories () {
               src='https://images.pexels.com/photos/1159670/pexels-photo-1159670.jpeg?auto=compress&cs=tinysrgb&w=1600'
               alt=''
             />
-            <button>
-              <Link to='/products/1' className='link'>
+            <Link to='/products/1' className='link'>
+              <button>
                 Shoes
-              </Link>
-            </button>
+              </button>
+            </Link>
           </div>
         </div>
       </div>
