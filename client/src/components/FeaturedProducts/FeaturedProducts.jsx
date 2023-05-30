@@ -1,40 +1,13 @@
 /* eslint-disable react/prop-types */
-import { useEffect, useState } from 'react'
 import { Card } from '../Card/Card'
+import { useFetch } from '../../hooks/useFetch'
+
 import './FeaturedProducts.scss'
-import axios from 'axios'
 
 export function FeaturedProducts ({ type }) {
-  const [data, setData] = useState([])
-
-  useEffect(() => {
-    const cancelToken = axios.CancelToken.source()
-
-    async function fetchData () {
-      try {
-        const res = await axios
-          .get(import.meta.env.VITE_REACT_APP_API_URL + `/products?populate=*&[filters][type][$eq]=${type}`,
-            {
-              headers: {
-                Authorization: 'bearer ' + import.meta.env.VITE_REACT_APP_API_TOKEN
-              },
-              cancelToken: cancelToken.token
-            })
-        setData(res.data.data)
-      } catch (error) {
-        if (axios.isCancel(error)) {
-          console.log('Cancelled api R')
-        }
-        console.log(error)
-      }
-    }
-
-    fetchData()
-
-    return () => {
-      cancelToken.cancel()
-    }
-  }, [])
+  const { data, loading, error } = useFetch(
+    `/products?populate=*&[filters][type][$eq]=${type}`
+  )
 
   return (
     <div className='featuredproducts'>
@@ -49,9 +22,15 @@ export function FeaturedProducts ({ type }) {
         </p>
       </div>
       <div className='bottom'>
-        {data.map(item => (
-          <Card item={item} key={item.id} />
-        ))}
+        {
+          error
+            ? 'Something went wrong'
+            : loading
+              ? 'Loading...'
+              : data.map(item => (
+                <Card item={item} key={item.id} />
+              ))
+        }
       </div>
     </div>
   )

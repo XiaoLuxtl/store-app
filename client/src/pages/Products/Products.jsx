@@ -1,31 +1,43 @@
-import { useParams } from 'react-router-dom'
 import { List } from '../../components/List/List'
+import { useParams } from 'react-router-dom'
 import { useState } from 'react'
+import { useFetch } from '../../hooks/useFetch'
 import './Products.scss'
 
 export function Products () {
+  const [selectedSubCats, setselectedSubCats] = useState([])
   const [maxPrice, setmaxPrice] = useState(1000)
   const [sort, setSort] = useState(null)
-
   const catId = parseInt(useParams().id)
+
+  const { data, loading, error } = useFetch(
+    `/sub-categories?[filters][categories][id][$eq]=${catId}`
+  )
+
+  function handlechange (e) {
+    const value = e.target.value
+    const isChecked = e.target.checked
+
+    setselectedSubCats(
+      isChecked
+        ? [...selectedSubCats, value.trim()]
+        : selectedSubCats.filter(item => item !== value)
+    )
+  }
+
+  console.log(selectedSubCats)
 
   return (
     <div className='products'>
       <div className='left'>
         <div className='filterItem'>
           <h2>Categoría del producto</h2>
-          <div className='inputItem'>
-            <input type='checkbox' id='1' value={1} />
-            <label htmlFor='1'>Dama</label>
-          </div>
-          <div className='inputItem'>
-            <input type='checkbox' id='2' value={2} />
-            <label htmlFor='2'>Caballero</label>
-          </div>
-          <div className='inputItem'>
-            <input type='checkbox' id='3' value={3} />
-            <label htmlFor='3'>Zapatos</label>
-          </div>
+          {data.map((item) => (
+            <div className='inputItem' key={item.id}>
+              <input type='checkbox' id={item.id} value={item.id} onChange={handlechange} />
+              <label htmlFor={item.id}>{item.attributes.title}</label>
+            </div>
+          ))}
         </div>
         <div className='filterItem'>
           <h2> Filtrar por precio</h2>
@@ -51,7 +63,7 @@ export function Products () {
           src='https://images.pexels.com/photos/1074535/pexels-photo-1074535.jpeg?auto=compress&cs=tinysrgb&w=1600'
           alt=''
         />
-        <List catId={catId} maxPrice={maxPrice} sort={sort} />
+        <List catId={catId} maxPrice={maxPrice} sort={sort} subCats={selectedSubCats} />
       </div>
     </div>
   )
