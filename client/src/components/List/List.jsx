@@ -10,8 +10,9 @@ export function List ({
   subCats
 }) {
   const { data, loading } = useFetch(
-    `/products?populate=*&[filters][categories][id]=${catId}
-    ${subCats.map(item => `&[filters][sub_categories][id][$eq]=${item}`).join('')}`
+    `/products?populate=*&[filters][categories][id]=${catId}${subCats.map(
+      item => `&[filters][sub_categories][id][$eq]=${item}`).join('')
+    }&[filters][price][$lte]=${maxPrice}&sort=price:${sort}`
   )
 
   return (
