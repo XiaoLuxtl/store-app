@@ -7,9 +7,10 @@ import './Products.scss'
 export function Products () {
   const [selectedSubCats, setselectedSubCats] = useState([])
   const [maxPrice, setmaxPrice] = useState(1000)
-  const [sort, setSort] = useState(null)
+  const [sort, setSort] = useState('asc')
   const catId = parseInt(useParams().id)
 
+  // eslint-disable-next-line no-unused-vars
   const { data, loading, error } = useFetch(
     `/sub-categories?[filters][categories][id][$eq]=${catId}`
   )
