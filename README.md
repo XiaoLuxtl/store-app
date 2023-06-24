@@ -6,6 +6,6 @@ React
 SCSS
 
 ## /api -> backend
-Using Strapi CMS
+Using [Strapi CMS](https://strapi.io/)
 
 TODO: Stripe as payment gateway
