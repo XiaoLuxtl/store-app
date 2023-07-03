@@ -1,4 +1,4 @@
-# App de Tienda
+# e-commerce con React
 
 Tienda en línea o e-commerce desarrollado con la tecnología de Strapi como CMS (backend) y React + SCSS (frontend). En el cual se tiene integrado el sistema de pagos Stripe con el que puedes recibir pagos de casi todo el mundo.
 
