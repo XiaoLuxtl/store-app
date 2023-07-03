@@ -36,6 +36,10 @@ npm run dev
 
 Estoy abierto a nuevas oportunidades y colaboraciones. Puedes comunicarte conmigo en [LinkedIn](https://www.linkedin.com/in/luis-rendon). Ponte en contacto y trabajemos juntos.
 
+## Portafolio
+
+Visita mi [Portafolio](https://xiaoluxtl.github.io/lux-portfolio/)
+
 ## License
 
 MIT
